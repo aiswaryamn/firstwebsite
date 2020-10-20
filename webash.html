@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>viratkohli quiz</title>
+<style>
+body {
+background-color: lightblue;
+font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px rgb(14, 13, 13) solid;
+margin: auto;
+padding: 10px;
+background-color:whitesmoke ;
+border-radius: 10px;
+}
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background:snow);
+background-image: url("virkoh.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+color:rgb(196, 212, 243);
+}
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+h1 {text-align: center;}
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+</style>
+
+</head>
+<body>
+<div id="main">
+<div id="header">
+<h1><strong><i style="color:whitesmoke">KING KOHLI QUIZ</i></strong></h1>
+<br><br><br>
+<h3 style="color:black;">Lets check how much you know about king kohli.........</h3>
+</div>
+<form id="form1">
+
+	<br><br>
+	<b>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+    <input type="text" id="fname" name="fname" style="width: 200px;"><br>
+    <br>Last name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+	<input type="text" id="lname" name="lname" style="width: 200px;"><br>
+    <br>Institution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </label>
+	<input type="text" id="institution" name="institution" style="width: 300px;"><br>
+    <br>email adress&nbsp;:</label></b>
+	<input type="email" id="email" name="email" style="width: 300px;">
+	<h3>1. In Ranji Trophy, Virat Kohli came into spotlight and played for which team?</h3>
+	<input type="radio" name="president" value="0"/>Karnataka<BR>
+	<input type="radio" name="president" value="0"/>Mumbai<br>
+	<input type="radio" name="president" value="5"/>Delhi<br>
+	<input type="radio" name="president" value="0"/>Rajasthan<br>
+	
+	<h3>2.Name the first Indian batsman to score 1,000 runs, in which most runs are in a calendar year and most fifties in the format?</h3>
+	<input type="radio" name="anthem" value="0"/>sachin tendulkar<br>
+	<input type="radio" name="anthem" value="5"/>virat kohli<br>
+	<input type="radio" name="anthem" value="0"/>rohit sharma<br>
+	<input type="radio" name="anthem" value="0"/>kapil sharma<br>
+	
+	<h3>3.When did Virat Kohli became India's Test captain?</h3>
+	<input type="radio" name="flag" value="5"/>2014<br>
+	<input type="radio" name="flag" value="0"/>2017<br>
+	<input type="radio" name="flag" value="0"/>2013<br>
+	<input type="radio" name="flag" value="0"/>2016<br>
+	
+	<h3>4.What is the pet name or nickname of Virat Kohli?</h3>
+	<input type="radio" name="blood" value="0"/>piku<br>
+	<input type="radio" name="blood" value="0"/>viki<br>
+	<input type="radio" name="blood" value="0"/>rinku<br>
+	<input type="radio" name="blood"  value="5"/>cheeku<br>
+	
+	<h3>5.Against whom Virat Kohli in a World Cup debut became the first Indian to score a century?</h3>
+	<input type="radio" name="bal" value="0"/>pakistan<br>
+	<input type="radio" name="bal" value="5"/>Bangladesh<br>
+	<input type="radio" name="bal" value="0"/>south africa<br>
+	<input type="radio" name="bal"  value="0"/>west indies<br>
+	<br>
+<br>
+<div class="marks">
+<button type="submit" value="Submit">Submit</button>
+</div>
+</form>
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+<script>
+document.getElementById("form1").onsubmit=function() {
+       president = parseInt(document.querySelector('input[name = "president"]:checked').value);
+	   anthem= parseInt(document.querySelector('input[name = "anthem"]:checked').value);
+	   flag= parseInt(document.querySelector('input[name = "flag"]:checked').value);
+	   blood= parseInt(document.querySelector('input[name = "blood"]:checked').value);
+	   bal= parseInt(document.querySelector('input[name = "bal"]:checked').value);
+	   
+	   result = president + anthem + flag + blood + bal;
+	   
+	document.getElementById("grade").innerHTML = result; 
+
+    return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+</body>
+</html>
